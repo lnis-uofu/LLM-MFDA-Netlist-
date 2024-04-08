@@ -1,0 +1,16 @@
+,,,,,,,,,
+,Prompt type ,,,,,,,,
+,Universal prompt pass,5/5,3/5,5/5,0/5 (returned bus representation),5/5,0/5,0/5,0/5
+,Bechmark type ,Can you heat me a solution and then mix it with another?,"Mix 2 solutions, then heat them ",mix three solutions ,"Mix 4 solutions, sequentially","Mix two solutions, heat them, then mix them sequentially with another two solutions",Mix two parts of solutionA  with one part of solution B,Mix two parts of solution x with one part of two other mixed solutions,reduce solution A by 2 and then mix it with solution B
+,,,,,,,,,
+,,,,,,,,,
+,,,Complete Verilog Initialization,Correctly Defined Primitives,Correct Connections,Correct Component flow,Comprehensive Pass ,,
+Benchmark 1,Mix 2,Can you heat me a solution and then mix it with another?,5/5,5/5,5/5,5/5,5/5,,
+Benchmark 2,"Mix 2 , heat","Mix 2 solutions, then heat them ",4/5 one run just gave us primitives,"1/5, heater flat failed consistently",5/5,4/5 one instance but TODOs in,1/5,,
+Benchmark 3,Mix 3,mix three solutions ,5/5,"1/5, mixer indexed 4x","4/5, we got one assign statement ",5/5,1/5,,
+Benchmark 4,Mix 4 series,"Mix 4 solutions, sequentially",5/5,5/5,"0/5, we got three assign statements and all of them had multi-bit busses",5/5,0/5,,
+Benchmark 5,"Mix 2, heat, mix 2 more","Mix two solutions, heat them, then mix them sequentially with another two solutions
+",5/5,3/5,5/5,5/5,3/5,,
+Benchmark 6,2 parts A mix 1 part B,Mix two parts of solutionA  with one part of solution B,5/5,"3/5- One mega fail, not even indexing error. I wonder how many would have indexed had they used more components ",4/5,0/5,0/5,,
+Benchmark 7,2 parts A mix 1 B 1 C,Mix two parts of solution x with one part of two other mixed solutions,5/5,"2/5, I suspect this is just because there aren't enough components",4/5,1/5,0/5,,
+Benchmark 8,1/2 part A mix B,reduce solution A by 2 and then mix it with solution B,1/5,5/5,3/5,2/5,0/5,,
